@@ -22,7 +22,7 @@ The latter's behaviour causes the issues described below.
 ## Expected Behaviour:
 Either
 1. If user rapidly taps custom back button, say, 7 times, navigation stack should go back 7 pages.
-2. NavigationPath should ignore programmatic manipulation while animation is in-flight. There should be a way to coordinate programmatic manipulation of a navigation path with its associated animation.
+2. NavigationPath should ignore programmatic manipulation while animation is in-flight. There should be a way to coordinate programmatic manipulation of a navigation path with its associated animation. (Using withAnimation or withAnimation(…completion) on iOS 17 has no effect).
 
 ## Workaround:
 - The custom back button (e.g. a persistent overlay or tab button not associated with any detail view) would have to gain access to each view's environment dismiss action, and use that to navigate back.
