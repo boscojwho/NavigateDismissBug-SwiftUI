@@ -2,6 +2,8 @@
 ## Rapidly calling removeLast on system/custom navigation path causes NavigationStack and navigation path states to become desynced.
 
 ## Overview: 
+Bug report filed on Sept. 19, 2023 (FB13189889)
+
 This demo app shows how programmatically dismissing views on a `NavigationStack` by manipuating its `navigationPath` can cause the stack (UI state) and path (data state) to become "de-synced".
 
 1. When using the environment dismiss action, the navigationPath's last value is removed **after** the "pop" animation completes.
